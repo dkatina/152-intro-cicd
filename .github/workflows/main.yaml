@@ -30,15 +30,15 @@ jobs:
 
       - name: Printing debugging Information
         run: |
-          echo "Python Version: ${python --version}"
-          echo "Working Directory: ${pwd}"
+          echo "Python Version: $(python --version)"
+          echo "Working Directory: $(pwd)"
           echo "Content of Working Directory: $(ls-l)"
           echo "Contents of site-package: $(ls-l venv/lib/python*/site-packages)"
     
   test:
     needs: build
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2 #Checks code for glaring errors
