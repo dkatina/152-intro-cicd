@@ -37,7 +37,8 @@ jobs:
     
   test:
     needs: build
-
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2 #Checks code for glaring errors
